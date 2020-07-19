@@ -1,4 +1,4 @@
-# ablation-test
+# Ablation Study
 
 This code will help performa a basic ablation test.
 Constraints:
