@@ -9,6 +9,7 @@ Constraints:
 Inputs:
 training records, training target, test records, test target
 
-models.py contains the code to instantiate the classifiers.
+ablation_analysis.py eliminates one feature at a time and assesses the performance.
+metrics.py contains the code to calculate Accuracy, Macro-F1 and AUC score.
+models.py contains the code to instantiate the classifiers. Use this file to add more models.
 
-Refer to main.py to see how to pass values to the Ablation class.
