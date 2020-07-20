@@ -106,7 +106,6 @@ class Metrics:
             fp.append(Metrics.find_FP(y_test, y_pred, i))
             fn.append(Metrics.find_FN(y_test, y_pred, i))
             tp.append(Metrics.find_TP(y_test, y_pred, i))
-            #print(tp, i)
             accuracy.append((tp[i] + tn[i])/(tp[i] + tn[i] + fp[i] + fn[i]))
             tpr.append(tp[i]/(fn[i] + tp[i]))
             tnr.append(tn[i]/(tn[i] + fp[i]))
@@ -132,11 +131,6 @@ class Metrics:
         ns_probs_0 = [0 for _ in range(len(y_test))]
         ns_probs_1 = [1 for _ in range(len(y_test))]
         try:
-            #calculate roc curves
-            #ns0_fpr, ns0_tpr, _ = roc_curve(y_test, ns_probs_0)
-            #ns1_fpr, ns1_tpr, _ = roc_curve(y_test, ns_probs_1)
-            #model_fpr, model_tpr, _ = roc_curve(y_test, model_probs)
-    
             ns0_auc = roc_auc_score(y_test, ns_probs_0)
             ns1_auc = roc_auc_score(y_test, ns_probs_1)
             model_probs = model.predict_proba(X_test)
