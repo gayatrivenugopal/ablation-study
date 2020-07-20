@@ -9,4 +9,6 @@ Constraints:
 Inputs:
 training records, training target, test records, test target
 
+models.py contains the code to instantiate the classifiers.
+
 Refer to main.py to see how to pass values to the Ablation class.
