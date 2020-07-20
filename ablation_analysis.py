@@ -32,4 +32,6 @@ class Ablation:
 
             #evaluation
             metrics[feature] = Metrics.get_metrics(model, train_data, self.y_train, test_data, self.y_test, self.labels)
+        self.model.fit(self.X_train, self.y_train)
+        metrics['none'] = Metrics.get_metrics(self.model, self.X_train, self.y_train, self.X_test, self.y_test, self.labels)
         return metrics
