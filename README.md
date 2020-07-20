@@ -9,7 +9,8 @@ Constraints:
 Inputs:<br>
 training records, training target, test records, test target<br>
 <br>
-ablation_analysis.py eliminates one feature at a time and assesses the performance.<br>
+ablation_analysis.py eliminates one feature at a time and assesses the performance. It returns a dictionary consisting of the eliminitated feature as the key
+and the metrics as the value. If no feature is eliminated, the key is set to 'none'.<br>
 metrics.py contains the code to calculate Accuracy, Macro-F1 and AUC score.<br>
 models.py contains the code to instantiate the classifiers. Use this file to add more models.
 
