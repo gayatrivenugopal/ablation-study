@@ -1,7 +1,7 @@
 # Ablation Study
 
 This code will help performa a basic ablation test.<br>
-Constraints:<br>
+Constraints:
 1. One feature will be removed at a time.<br>
 2. We are assuming a classification task.<br>
 3. The metrics returned are accuracy, macro-f1 and AUC scores<br>
