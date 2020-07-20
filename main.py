@@ -5,8 +5,6 @@ from ablation_analysis import Ablation
 
 train_data = pd.read_csv('train.csv')
 test_data = pd.read_csv('test.csv')
-del train_data['word']
-del test_data['word']
 
 X_train = train_data.iloc[:, :-1]
 y_train = train_data.label
